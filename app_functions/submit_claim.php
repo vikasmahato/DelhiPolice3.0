@@ -55,10 +55,10 @@ if($stmt = $mysqli->prepare($sql)){
 //echo $sql; 
 if($stmt->execute()){
 
-logger('dealinghand', 'New Claim Entry', $diaryNo )
+logger('dealinghand', 'New Claim Entry', $diaryNo );
    //// $last_id =  $stmt->last_id;
       //  header('location: checklist.php?id='.$last_id);
-}else{
+} else{
 	if(DEBUG) echo $stmt->error;
   	else header('location:some_error.php ');
 }
