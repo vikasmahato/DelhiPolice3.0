@@ -36,7 +36,7 @@ if($stmt = $mysqli->prepare($sql)){
 
 //echo $sql; 
 if($stmt->execute()){
-    $last_id =  $stmt->last_id;
+    $last_id =  $stmt->insert_id;
     header('location: ../viewregister.php?id='.$last_id.'&type='.$diaryType);
 }else{
 	if(DEBUG) echo $stmt->error;

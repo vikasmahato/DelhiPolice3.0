@@ -1,8 +1,9 @@
 <?php
 require '../secure/config.php';
+require '../secure/db_connect.php';
 
 if(DEBUG) {error_reporting(E_ALL); ini_set('display_errors', 1); }
-include("includes/dbcon.php");
+include("../includes/dbcon.php");
 
     $admis_amt = $_POST['admis_amt'];
     $date = $_POST['date'];

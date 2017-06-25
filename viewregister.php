@@ -38,7 +38,7 @@ if($stmt1 = $mysqli->prepare($sql)){
     <section class="content">
       <!-- title row -->
       <div class="row">
-        <form class="form-horizontal" role="form" method="post" action="update_register.php">
+        <form class="form-horizontal" role="form" method="post" action="app_functions/update_register.php">
         <div class="col-md-6">
           <div class="box box-default">
             <div class="box-header with-border">
@@ -135,7 +135,7 @@ if($stmt1 = $mysqli->prepare($sql)){
         <div class="row">
         <div class="col-md-6">
         
-          <?php if ($_SESSION['sess_userrole']=="dealinghand"){ ?>
+          <?php if ($_SESSION['role']=="dealinghand"){ ?>
     <button type="submit" class="btn btn-success btn-lg btn-block col-md-6">Update</button>
            
     <?php
@@ -148,7 +148,7 @@ if($stmt1 = $mysqli->prepare($sql)){
           
           <div class="col-md-6">
               
-           <?php if ($_SESSION['sess_userrole']=="dealinghand"){ ?>
+           <?php if ($_SESSION['role']=="dealinghand"){ ?>
           <form action="app_functions/add_objection.php" method="post">
               <?php if($objection==0){ ?>
                 <input type="hidden" value="1" name="objection">
