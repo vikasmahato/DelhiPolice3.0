@@ -159,6 +159,7 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                 <thead>
                 <tr>
                     <th>S No</th>
+                    <th>Status</th>
                   <th>Diary No</th>
                   <th>Rank/Name/No</th>
                   <th>Treatment Taken By</th>
@@ -172,8 +173,23 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                
                 while($stmt1->fetch())
                 { 
+
+                   if($s=$mysqli->prepare("select app_id, status FROM form WHERE diary_no = ? AND diary_date = ?")){
+                        $s->bind_param('ss',$diaryNo, $diaryDate );
+                        $s->execute();
+                        $s->store_result();
+                        $s->bind_result($app_id, $status);
+                        $s->fetch();
+                    }else if(DEBUG) echo $mysqli->error();
+
+
                 ?>
                 <tr><td><?php echo $num_ind; ?></td>
+                 <td>
+                          
+                           <span class="label label-default"><?php echo $status; ?></span>
+                           
+                    </td> 
                        <td>
                       <?php echo $diaryNo."/".$diaryType."/Gen Br./SED/Dated/".$diaryDate; ?>    
                     </td>  
@@ -185,15 +201,6 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                 <td><a class="btn btn-block btn-default" href="viewregister.php?id=<?php echo $s_no; ?>&type=<?php echo $diaryType; ?>"><i class="fa fa-eye"></i> View</a></td>
                     <td>
                     <?php 
-                  
-                    
-                    if($s=$mysqli->prepare("select app_id FROM form WHERE diary_no = ? AND diary_date = ?")){
-                        $s->bind_param('ss',$diaryNo, $diaryDate );
-                        $s->execute();
-                        $s->store_result();
-                        $s->bind_result($app_id);
-                        $s->fetch();
-                    }else if(DEBUG) echo $mysqli->error();
                     
                     if($app_id=='')
                     { ?>

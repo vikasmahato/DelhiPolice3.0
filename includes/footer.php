@@ -67,6 +67,14 @@
       "info": true,
       "autoWidth": false
     });
+    $('#logs').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true
+    });
   });
 </script>
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>

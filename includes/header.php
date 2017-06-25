@@ -1,6 +1,8 @@
 <?php
-include("secure/db_connect.php");
-include("secure/functions.php");
+require("secure/db_connect.php");
+require("secure/functions.php");
+require("secure/config.php");
+
 sec_session_start();
 
 $page = basename($_SERVER['PHP_SELF']);
