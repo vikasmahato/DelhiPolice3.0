@@ -13,9 +13,9 @@
           $sql1 = '';
 
           if($table==='register')
-            $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, pis, treatment_by, type FROM register WHERE s_no = ?";
+            $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, pis, treatment_by, type, hospitalName FROM register WHERE s_no = ?";
           else if($table==='register_hospital')
-             $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, pis, treatment_by, type FROM register_hospital WHERE s_no = ?";
+             $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, pis, treatment_by, type, hospitalName FROM register_hospital WHERE s_no = ?";
           
           
 
@@ -23,7 +23,7 @@
             $stmt1->bind_param('s', $id );
             $stmt1->execute();
             $stmt1->store_result();
-            $stmt1->bind_result( $s_no, $diaryNo, $diaryType, $diaryDate, $rank, $applicantName, $idNo, $pis, $treatment_by, $type);
+            $stmt1->bind_result( $s_no, $diaryNo, $diaryType, $diaryDate, $rank, $applicantName, $idNo, $pis, $treatment_by, $type, $hospitalName );
            $stmt1->fetch();
             }else if(DEBUG) echo $mysqli->error();
                   } ?>
