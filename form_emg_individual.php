@@ -41,7 +41,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-	      <form role="form" method="post" action="add_emg_individual.php" enctype="multipart/form-data">
+	      <form role="form" method="post" action="app_functions/submit_claim.php" enctype="multipart/form-data">
         <input type="hidden" name="claim_type" value="OP_EMERGENCY">
               <div class="box-body">
                    <div class="form-group">
