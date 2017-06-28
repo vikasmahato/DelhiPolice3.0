@@ -51,7 +51,6 @@ echo "<br>".$sql;
 if($stmt = $mysqli->prepare($sql)){
 	$stmt->bind_param( 'sssssssssssssssssssssssssssss', $appName, $pis, $rank, $relation, $relativeName, $pincode, $startDate, $endDate, $hospitalName, $hospitalAddress, $policestationNo, $siNo, $diaryNo, $refHospitalName, $appCGHSno, $appCGHSexp, $refCGHSno, $refCGHSexp, $appCGHScategory, $disease,  $diaryDate, $amtAsked, $amtGranted, $amtAvailable, $status, $period,  $claimType, $hospType,  $amtDue  );
 }else if(DEBUG) echo $mysqli->error();
-//9 //17//25//30
 //echo $sql; 
 if($stmt->execute()){
 

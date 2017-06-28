@@ -2,7 +2,7 @@
 
 define("HOST", "localhost"); // The host you want to connect to.
 define("USER", "root"); // The database username.
-define("PASSWORD", ""); // The database password. 
+define("PASSWORD", "123456"); // The database password. 
 define("DATABASE", "jasola"); // The database name.
 define("PORT", 3306);
  
