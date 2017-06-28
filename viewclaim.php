@@ -148,7 +148,7 @@ if($stmt1 = $mysqli->prepare($sql)){
             <!-- Modal Body -->
             <div class="modal-body">
                 
-                <form class="form-horizontal" role="form" method="post" action="update.php">
+                <form class="form-horizontal" role="form" method="post" action="app_functions/submit_approve.php">
                   <div class="form-group">
                     <label  class="col-sm-2 control-label"
                               for="orderNo">Comments:</label>
@@ -192,7 +192,7 @@ if($stmt1 = $mysqli->prepare($sql)){
             <!-- Modal Body -->
             <div class="modal-body">
                 
-                <form class="form-horizontal" role="form" method="post" action="update.php">
+                <form class="form-horizontal" role="form" method="post" action="app_functions/submit_approve.php">
                   <div class="form-group">
                     <label  class="col-sm-2 control-label"
                               for="reason">Reason</label>
