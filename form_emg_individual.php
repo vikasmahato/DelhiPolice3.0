@@ -114,14 +114,14 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="startDate" class="form-control pull-right" id="datepicker">
+                  <input type="text" name="startDate" class="form-control pull-right" id="fromDate">
                 </div>
                        <span class="input-group-addon" id="periodTo">To</span>
                      <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="endDate" class="form-control pull-right" id="datepicker">
+                  <input type="text" name="endDate" class="form-control pull-right" id="toDate">
                 </div>
                 </div>
                   

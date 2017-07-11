@@ -64,7 +64,7 @@
     </div>
     <!-- /.login-box -->
 
-    <div class="login-box">
+    <div class="login-box" style="display: none;">
         <!-- /.register-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">Sign Up</p>

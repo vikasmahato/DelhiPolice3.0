@@ -1,9 +1,7 @@
-
-
-
 //adds extra table rows
 var i=$('table tr').length;
 $(".addmore").on('click',function(){
+
 	html = '<tr>';
 	html += '<td><input class="case" type="checkbox"/></td>';
 	html += '<td><input type="text" data-type="productCode" name="itemNo[]" id="itemNo_'+i+'" class="form-control autocomplete_txt" autocomplete="off"></td>';
@@ -15,8 +13,19 @@ $(".addmore").on('click',function(){
     
 	html += '<td><input type="number" step="any" name="total[]" id="total_'+i+'" class="form-control totalLinePrice" autocomplete="off" onkeypress="return IsNumeric(event);" ondrop="return false;" onpaste="return false;"></td>';
 	html += '</tr>';
-	$('table').append(html);
-	i++;
+
+if ($("#CalculationSheet input:checkbox:checked").length > 0)
+{
+   //.append(html);
+    var row =  $('.case:checkbox:checked').parents("tr"); // get the parent row of the clicked button
+        $(html).insertAfter(row);
+      
+}
+else
+{
+   $('table').append(html);
+}
+i++;
 });
 
 //to check all checkboxes
@@ -57,7 +66,7 @@ var category = e.options[e.selectedIndex].value;
 	$(this).autocomplete({
 		source: function( request, response ) {
 			$.ajax({
-				url : 'ajax.php',
+				url : 'ajax/get_calcsheet_item.php',
 				dataType: "json",
 				method: 'post',
 				data: {
@@ -147,8 +156,4 @@ function IsNumeric(e) {
     return ret;
 }
 
-//datepicker
-$(function () {
-    $('#invoiceDate').datepicker({});
-});
 

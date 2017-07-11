@@ -127,7 +127,15 @@ if($stmt1 = $mysqli->prepare($sql)){
         
       
         
-          <?php if ($_SESSION['role']!="dealinghand"){ ?>
+          <?php
+
+          $url = $_SERVER['HTTP_REFERER'];
+          $referrer = substr($url, strrpos($url, '/') + 1);
+         // echo $id;
+         // echo $_SERVER['HTTP_REFERER']; 
+         $pages = array('dashboard_dcp.php', 'dashboard_acp.php', 'dashboard_iadmin.php', 'dashboard_hag.php');
+
+ if ($_SESSION['role']!="dealinghand" && (in_array($referrer, $pages))){ ?>
     <button type="button" class="btn btn-success btn-lg btn-block col-md-6" data-toggle="modal" data-target="#approveModal">Approve</button>
         <!-- Modal -->
 <div class="modal fade" id="approveModal" tabindex="-1" role="dialog">
@@ -158,7 +166,7 @@ if($stmt1 = $mysqli->prepare($sql)){
                     </div>
                   </div>
                 <input name="appId" type="text" value="<?php echo $id; ?>" class="hidden" />
-                <input type="submit" name="approve_btn" id="submit-form"  />
+                <input type="submit" name="approve_btn" id="submit-form" value="Approve" class="btn btn-primary" />
                 </form>   
             </div>
             
@@ -202,7 +210,7 @@ if($stmt1 = $mysqli->prepare($sql)){
                     </div>
                   </div>
                 <input name="appId" type="number" value="<?php echo $id; ?>" class="hidden" />
-                <input type="submit" id="submit-form" name="deny_btn" />
+                <input type="submit" id="submit-form" name="deny_btn" value="Re-eval" class="btn btn-warning" />
                 </form>   
             </div>
             

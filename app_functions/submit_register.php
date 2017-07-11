@@ -1,6 +1,7 @@
 <?php
 require ('../secure/db_connect.php');
 require ('../secure/config.php');
+require ('logger.php');
 
 if(DEBUG) error_reporting(E_ALL); ini_set('display_errors', 1);
 
@@ -33,7 +34,7 @@ if($stmt = $mysqli->prepare($sql)){
 	$stmt->bind_param( 'ssssssssssssssss', $diaryNo, $diaryType, $diaryDate, $rank, $applicantName, $idNo, $pis, $treatment_by, $hospitalName, $type, $amt_claimed, $admis_amt, $number, $date, $sanction_no, $sanction_date  );
 }else if(DEBUG) echo $mysqli->error;
 
-
+logger('dealinghand', 'New Claim Entry', $diaryNo );
 //echo $sql; 
 if($stmt->execute()){
     $last_id =  $stmt->insert_id;

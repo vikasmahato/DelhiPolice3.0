@@ -81,9 +81,33 @@
 
 <script>
 $('#datepicker').datepicker({
+  showButtonPanel: true,
+  todayHighlight: true,
+  format: 'dd/mm/yyyy',
+        autoclose: true
+    });
+$('#fromDate').datepicker({
 	showButtonPanel: true,
 	todayHighlight: true,
 	format: 'dd/mm/yyyy',
+        autoclose: true
+    });
+$('#toDate').datepicker({
+  showButtonPanel: true,
+  todayHighlight: true,
+  format: 'dd/mm/yyyy',
+        autoclose: true
+    });
+$('#appCGHSdate').datepicker({
+  showButtonPanel: true,
+  todayHighlight: true,
+  format: 'dd/mm/yyyy',
+        autoclose: true
+    });
+$('#depCGHSdate').datepicker({
+  showButtonPanel: true,
+  todayHighlight: true,
+  format: 'dd/mm/yyyy',
         autoclose: true
     });
 </script>

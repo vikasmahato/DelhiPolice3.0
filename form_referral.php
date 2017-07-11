@@ -116,14 +116,14 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="startDate" class="form-control pull-right" id="datepicker">
+                  <input type="text" name="startDate" class="form-control pull-right" id="fromDate">
                 </div>
                        <span class="input-group-addon" id="periodTo">To</span>
                      <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="endDate" class="form-control pull-right" id="datepicker">
+                  <input type="text" name="endDate" class="form-control pull-right" id="toDate">
                 </div>
                 </div>
                   
@@ -160,7 +160,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="appCGHSexp" class="form-control pull-right" id="datepicker" required>
+                  <input type="text" name="appCGHSexp" class="form-control pull-right" id="appCGHSdate" required>
                 </div>
                 </div>
                   
@@ -175,7 +175,7 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="refCGHSexp" class="form-control pull-right" id="datepicker" value="00-00-0000">
+                  <input type="text" name="refCGHSexp" class="form-control pull-right" id="depCGHSdate" value="00-00-0000">
                 </div>
                 </div>
                     
