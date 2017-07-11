@@ -8,7 +8,7 @@ include '../secure/functions.php';
 if(DEBUG) error_reporting(E_ALL); ini_set('display_errors', 1);
 sec_session_start();
 if (isset($_POST['approve_btn'])){
-        $comment =  $_POST['inputComment'];
+    $comment =  $_POST['inputComment'];
     $choice = $_SESSION['role'];
     $id = $_POST['appId'];
     $insetComment='';
