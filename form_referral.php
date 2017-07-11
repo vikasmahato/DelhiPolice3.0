@@ -1,5 +1,4 @@
 <?php include("includes/header.php"); ?>
-<?php include ("secure/config.php"); ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->

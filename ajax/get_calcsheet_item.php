@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/dbcon.php';
+require_once '../includes/dbcon.php';
 if(!empty($_POST['type'])){
 	$type 		= $_POST['type'];
 	$name 		= $_POST['name_startsWith'];

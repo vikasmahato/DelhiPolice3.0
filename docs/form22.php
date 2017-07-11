@@ -1,9 +1,11 @@
 <?php
 $string1 = "";
 $string2 = "$value[a_cghs_no]";
+$patient = "$value[applicant_name]";
 if($value['relation']!="own"){
     $string1 = "$value[relation] of";
     $string2 = "$value[r_cghs_no]";
+    $patient = "$value[relative_name]";
 }
 $form22 = "<html lang='en'>
   <head>
@@ -42,7 +44,7 @@ $form22 = "<html lang='en'>
         <div style='margin-left:100px;margin-top:10px;'>$string1 $value[rank] $value[applicant_name], No. $value[police_station_no] (PIS $value[pis])</div>
         
         <div>Sir,</div>
-		<p style='text-indent:12%;text-align:justify;'>It is stated that _________________________________________<br>is admitted in your Hospital since $value[startdate] in emergency condition due to as mentioned in emergency certificate. He/She is a CGHS beneficiary and having a valid CGHS card ID No. $string2. The applicant has requested for providing credit facility because he is not in a position to bear the expenditure to be incurred on the treatment of the patient. Hence, he/she may be provided credit facility as per CGHS instructions vide MH&FW O.M. No. S.11045/36/2012-CGHS(HEC), dated 01.10.2014 vide para-4 and bill may be prepared according to the CGHS approved rate list and sent to this office immediately (in triplicate) for reimbursement. The Govt. Servant is entitled for $value[a_cghs_category] ward category.</p>
+		<p style='text-indent:12%;text-align:justify;'>It is stated that $patient is admitted in your Hospital since $value[startdate] in emergency condition due to as mentioned in emergency certificate. He/She is a CGHS beneficiary and having a valid CGHS card ID No. $string2. The applicant has requested for providing credit facility because he is not in a position to bear the expenditure to be incurred on the treatment of the patient. Hence, he/she may be provided credit facility as per CGHS instructions vide MH&FW O.M. No. S.11045/36/2012-CGHS(HEC), dated 01.10.2014 vide para-4 and bill may be prepared according to the CGHS approved rate list and sent to this office immediately (in triplicate) for reimbursement. The Govt. Servant is entitled for $value[a_cghs_category] ward category.</p>
         <div style='text-align:center;margin-top:40px;margin-bottom:40px'>This has the approval of Addl. DCP/SE district</div>
       <div style='text-align:right;margin-bottom:65px'>Yours faithfully,</div>
       <div style='text-align:right'>ASSTT. COMMISSIONER OF POLICE (HQ),</div>

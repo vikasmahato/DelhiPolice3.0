@@ -1,5 +1,4 @@
 <?php include ("includes/header.php");?>
-<?php include ("secure/config.php");?>
 <?php 
  $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register WHERE diaryType='Individual' AND  Month(timestamp) = Month(CURRENT_TIMESTAMP)  ORDER BY timestamp DESC";
 $sql2 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register_hospital WHERE diaryType='Hospital' AND  Month(timestamp) = Month(CURRENT_TIMESTAMP) ORDER BY timestamp DESC";

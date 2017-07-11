@@ -55,7 +55,7 @@ if($stmt = $mysqli->prepare($sql)){
 if($stmt->execute()){
 
 logger('dealinghand', 'New Claim Entry', $diaryNo );
-   // $last_id =  $stmt->last_id;
+   $last_id =  $stmt->insert_id;
   if(!DEBUG) header('location: ../viewclaim.php?id='.$last_id);
 } else{
 	if(DEBUG) echo $stmt->error;
