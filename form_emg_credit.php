@@ -45,25 +45,8 @@
               <input type="hidden" name="claim_type" value="IP_EMERGENCY">
               <div class="box-body">
                    <div class="form-group">
-                  <label for="rank">Rank</label>
-                   <select class="custom-select form-control" name="rank" required >
-                         <option value="" selected disabled>Please select</option>
-                         <option value="Cook">Cook</option>
-                         <option value="MTS">MTS</option>
-                         <option value="Constable">Constable</option>
-                         <option value="W/Constable">W/Constable</option>
-                         <option value="Head Constable">Head Constable</option>
-                         <option value="W/Head Constable">W/Head Constable</option>
-                         <option value="Assistant Sub-Inspector">Assistant Sub-Inspector</option>
-                         <option value="W/Assistant Sub-Inspector">W/Assistant Sub-Inspector</option>
-                         <option value="Sub-Inspector">Sub-Inspector</option>
-                         <option value="W/Sub-Inspector">W/Sub-Inspector</option>
-                         <option value="Inspector">Inspector</option>
-                         <option value="W/Inspector">W/Inspector</option>
-                         <option value="Assistant Commissioner of Police">Assistant Commissioner of Police</option>
-                         <option value="Additional Deputy Commissioner of Police">Additional Deputy Commissioner of Police</option>
-                         <option value="Deputy Commissioner of Police">Deputy Commissioner of Police</option>
-                    </select>
+                    <label for="rank">Rank</label>
+                 <input type="text" class="form-control" id="basic-url" name="rank" placeholder="Rank" value="<?php echo  $rank; ?>" required >
                 </div>
                   
               	<div class="form-group">
