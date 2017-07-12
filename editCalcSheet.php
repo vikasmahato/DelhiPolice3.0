@@ -1,5 +1,5 @@
-<?php include("includes/header.php"); ?>
-
+<?php include("includes/header.php");
+require "includes/dbcon.php"?>
 <?php
 $s_no = $_GET['id'];
 
@@ -29,7 +29,7 @@ $amount = mysqli_fetch_assoc(mysqli_query($con, "SELECT amt_granted, amt_asked F
 ?>
 
     <link href="dist/css/style.css" rel="stylesheet">
-
+    <link href="dist/css/jquery-ui.min.css" rel="stylesheet">
     <!-- Begin page content -->
     <div class="content-wrapper">
            <!-- Content Header (Page header) -->

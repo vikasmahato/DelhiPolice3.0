@@ -2,7 +2,7 @@
 $string ="";
 if($value['r_cghs_no']!=0)
 {
-    $string="___________________________ (Name of the patient) W/O, S/O, D/O, F/O, M/O $value[rank] $value[applicant_name] (Name of the police officer/men) ";
+    $string=" $value[relative_name] (Name of the patient) W/O, S/O, D/O, F/O, M/O $value[rank] $value[applicant_name] (Name of the police officer/men) ";
 }
 else {
 	$string="$value[rank] $value[applicant_name]";

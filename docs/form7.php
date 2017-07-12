@@ -3,7 +3,7 @@ $patient_name ="";
 $rel_string="";
 if($value['r_cghs_no']!=0)
 {
-    $patient_name="____________________________";
+    $patient_name="$value[relative_name]";
     $rel_string="$value[relation]";
     
 }
