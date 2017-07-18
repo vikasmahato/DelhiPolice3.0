@@ -5,27 +5,6 @@
     <section class="content-header">
       <h1>
         New Permission Credit
-         <?php if(isset($_GET)){
-          $id = $_GET['id'];
-          $table = $_GET['table'];
-
-          $sql1 = '';
-
-          if($table==='register')
-            $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, pis, treatment_by, type FROM register WHERE s_no = ?";
-          else if($table==='register_hospital')
-             $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, pis, treatment_by, type FROM register_hospital WHERE s_no = ?";
-          
-          
-
-          if($stmt1 = $mysqli->prepare($sql1)){
-            $stmt1->bind_param('s', $id );
-            $stmt1->execute();
-            $stmt1->store_result();
-            $stmt1->bind_result( $s_no, $diaryNo, $diaryType, $diaryDate, $rank, $applicantName, $idNo, $pis, $treatment_by, $type);
-           $stmt1->fetch();
-            }else if(DEBUG) echo $mysqli->error();
-                  } ?>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -45,21 +24,41 @@
         <input type="hidden" name="claim_type" value="CREDIT">
               <div class="box-body">
                   <div class="form-group">
-                    <label for="rank">Rank</label>
-                 <input type="text" class="form-control" id="basic-url" name="rank" placeholder="Rank" value="<?php echo  $rank; ?>" required >
-                </div>
+                      <label for="rank">Rank</label>
+                      <select class="custom-select form-control" name="rank" required>
+                          <option value="" selected disabled>Please select</option>
+                          <option value="Cook">Cook</option>
+                          <option value="MTS">MTS</option>
+                          <option value="Constable">Constable</option>
+                          <option value="W/Constable">W/Constable</option>
+                          <option value="Head Constable">Head Constable</option>
+                          <option value="W/Head Constable">W/Head Constable</option>
+                          <option value="Assistant Sub-Inspector">Assistant Sub-Inspector</option>
+                          <option value="W/Assistant Sub-Inspector">W/Assistant Sub-Inspector</option>
+                          <option value="Sub-Inspector">Sub-Inspector</option>
+                          <option value="W/Sub-Inspector">W/Sub-Inspector</option>
+                          <option value="Inspector">Inspector</option>
+                          <option value="W/Inspector">W/Inspector</option>
+                          <option value="Assistant Commissioner of Police">Assistant Commissioner of Police</option>
+                          <option value="Additional Deputy Commissioner of Police">Additional Deputy Commissioner of
+                              Police
+                          </option>
+                          <option value="Deputy Commissioner of Police">Deputy Commissioner of Police</option>
+                      </select>
+                  </div>
                   
               	<div class="form-group">
                   <label for="applicantName">Applicant Name</label>
-                 <input type="text" class="form-control" id="basic-url" name="applicantName" placeholder="Applicant Name" value="<?php echo $applicantName; ?>" required >
+                    <input type="text" class="form-control" id="basic-url" name="applicantName"
+                           placeholder="Applicant Name" required>
                 </div>
                 <div class="form-group">
                   <label for="idNo">Belt No</label>
-                  <input type="text" class="form-control" id="basic-url" name="idNo" placeholder="Belt No" value="<?php echo $idNo; ?>"  required >
+                    <input type="text" class="form-control" id="basic-url" name="idNo" placeholder="Belt No" required>
                 </div>
                 <div class="form-group">
                   <label for="pis">PIS No</label>
-                  <input type="text" class="form-control" id="basic-url" name="pis" placeholder="PIS No" value="<?php echo $pis; ?>" required >
+                    <input type="text" class="form-control" id="basic-url" name="pis" placeholder="PIS No" required>
                 </div>
                
                 <div class="form-group">
@@ -114,9 +113,10 @@
                   
                       <div class="form-group">
                   <span class="input-group-addon" id="basic-addon3">Enter Diary No</span>
-            <input type="text" class="form-control" id="diary" name="diaryNo" placeholder="Diary No" value = "<?php echo $diaryNo; ?>" required >
+                          <input type="text" class="form-control" id="diary" name="diaryNo" placeholder="Diary No"
+                                 required>
             <span class="input-group-addon" id="dated">/Genl. Branch/SED dated</span>
-            <input type="text" class="form-control" id="datepicker" name="diaryDate" value="<?php echo $diaryDate; ?>" required >
+                          <input type="text" class="form-control" id="datepicker" name="diaryDate" required>
                 </div>
                   
                       <div class="form-group">

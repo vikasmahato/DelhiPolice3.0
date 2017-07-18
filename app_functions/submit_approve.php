@@ -46,7 +46,7 @@ if($stmt->execute()){
 
 logger($choice, 'Approval of claim', $diaryNo );
         mysqli_query($con, $updateStatus);
-        header('location: $redirect');
+    header("location: $redirect");
     }else {
          header('location: some_error.php');
     }
