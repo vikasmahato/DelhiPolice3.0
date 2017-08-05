@@ -83,6 +83,11 @@
             <i class="fa fa-dashboard"></i> <span>Logs</span>
           </a>
         </li>
+                <li class="treeview <?php if($currentPage =='signup' ){echo 'active';}?>">
+                    <a href="signup.php">
+                        <i class="fa fa-dashboard"></i> <span>Signup</span>
+                    </a>
+                </li>
 
          
           <?php

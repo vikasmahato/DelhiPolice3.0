@@ -74,6 +74,8 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
     
 
         <div class="row">
+            <?php if($_SESSION['role'] == 'dealinghand'){ ?>
+
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
               <span class="info-box-icon bg-red"><i class="fa fa-list-ol"></i></span>
@@ -86,7 +88,8 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
           </div>
           <!-- /.info-box -->
         </div>
-            
+
+            <?php } ?>
           <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box bg-yellow">
             <span class="info-box-icon"><i class="fa fa-calendar"></i></span>

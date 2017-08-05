@@ -133,7 +133,7 @@ if($stmt1 = $mysqli->prepare($sql)){
           $referrer = substr($url, strrpos($url, '/') + 1);
          // echo $id;
          // echo $_SERVER['HTTP_REFERER']; 
-         $pages = array('dashboard_dcp.php', 'dashboard_acp.php', 'dashboard_iadmin.php', 'dashboard_hag.php');
+         $pages = array('dashboard_admin.php', 'dashboard_acp.php', 'dashboard_iadmin.php', 'dashboard_hag.php');
 
  if ($_SESSION['role']!="dealinghand" && (in_array($referrer, $pages))){ ?>
     <button type="button" class="btn btn-success btn-lg btn-block col-md-6" data-toggle="modal" data-target="#approveModal">Approve</button>
