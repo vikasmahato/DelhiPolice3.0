@@ -2,8 +2,8 @@
 
 define("HOST", "localhost"); // The host you want to connect to.
 define("USER", "root"); // The database username.
-define("PASSWORD", ""); // The database password. 
-define("DATABASE", "jasola"); // The database name.
+define("PASSWORD", "ghHYGb46889.gh"); // The database password. 
+define("DATABASE", "delhipolice"); // The database name.
 define("PORT", 3306);
  
 $mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);
