@@ -207,6 +207,7 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                     if($app_id=='')
                     { ?>
                  <div class="input-group-btn">
+                     <?php if($_SESSION['role'] == 'dealinghand'){ ?>
                   <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Make Claim
                     <span class="fa fa-caret-down"></span></button>
                   <ul class="dropdown-menu">
@@ -214,6 +215,7 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                     <li><a href="form_emg_individual.php?id=<?php echo $s_no; ?>&table=register">Emergency Claim</a></li>
                     <li><a href="form_emg_credit.php?id=<?php echo $s_no; ?>&table=register">Emergency Credit</a></li>
                   </ul>
+                     <?php } else echo "<button class='btn btn-warning'>Pending</button>";?>
                 </div>
                          
                     <?php }

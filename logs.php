@@ -60,7 +60,7 @@ if($stmt1 = $mysqli->prepare($query)){
                 <tr>
                   <td><?php echo $user_name; ?></td>
                   <td><?php echo $diary_no; ?></td>
-                  <td><?php echo $time; ?></td>
+                  <td><?php echo date("d-m-Y h:i:s a", strtotime($time)); ?></td>
                   <td><?php echo $action; ?></td>
                 </tr>
                 <?php 

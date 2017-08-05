@@ -10,13 +10,13 @@ if($diaryType=='Individual'){
     $query = "SELECT diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type, sanction_no, sanction_date, `date`, `number` 
         FROM register
         WHERE Year(timestamp) = Year(CURRENT_TIMESTAMP) 
-        AND Month(timestamp) = $month
+        AND Month(timestamp) = ?
         AND diaryType = 'Individual'";
 } elseif($diaryType=='Hospital'){
     $query = "SELECT diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type, sanction_no, sanction_date, `date`, `number` 
         FROM register_hospital
         WHERE Year(timestamp) = Year(CURRENT_TIMESTAMP) 
-        AND Month(timestamp) = $month
+        AND Month(timestamp) = ?
         AND diaryType = 'Hospital'";
 }
 
