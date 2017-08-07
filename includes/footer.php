@@ -67,6 +67,15 @@
       "info": true,
       "autoWidth": false
     });
+      
+      $('#dcpallclaims').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true
+    });
     $('#logs').DataTable({
       "paging": true,
       "lengthChange": true,

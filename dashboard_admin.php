@@ -29,7 +29,7 @@
             </div>
             <!-- /.box-header -->
               <div class="box-body">
-              <table id="godown" class="table table-bordered table-hover">
+              <table id="dcpallclaims" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th>Status</th>
@@ -46,7 +46,7 @@
                     $stmt1->execute();
                     $stmt1->store_result();
                     $stmt1->bind_result( $rank, $applicant_name, $application_date, $app_id );
-                   $stmt1->fetch();
+
                 }else if(DEBUG) echo $mysqli->error();
 
                 while($stmt1->fetch())

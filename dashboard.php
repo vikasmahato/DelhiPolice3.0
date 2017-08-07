@@ -74,9 +74,11 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
     
 
         <div class="row">
+            <?php if($_SESSION['role'] == 'dealinghand'){ ?>
+
         <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="ion ion-ios-plus"></i></span>
+              <span class="info-box-icon bg-red"><i class="fa fa-list-ol"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">Add New <br>Register Entry</span>
@@ -86,7 +88,8 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
           </div>
           <!-- /.info-box -->
         </div>
-            
+
+            <?php } ?>
           <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box bg-yellow">
             <span class="info-box-icon"><i class="fa fa-calendar"></i></span>
@@ -113,7 +116,7 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
         </div>
              <div class="col-md-3 col-sm-6 col-xs-12">
           <div class="info-box">
-            <span class="info-box-icon bg-red"><i class="ion ion-ios-arrow-right"></i></span>
+              <span class="info-box-icon bg-red"><i class="fa fa-pie-chart"></i></span>
 
             <div class="info-box-content">
               <span class="info-box-text">View Statistics</span>
@@ -204,15 +207,15 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                     if($app_id=='')
                     { ?>
                  <div class="input-group-btn">
+                     <?php if($_SESSION['role'] == 'dealinghand'){ ?>
                   <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Make Claim
                     <span class="fa fa-caret-down"></span></button>
                   <ul class="dropdown-menu">
                     <li><a href="form_referral.php?id=<?php echo $s_no; ?>&table=register">Referral/Govt</a></li>
                     <li><a href="form_emg_individual.php?id=<?php echo $s_no; ?>&table=register">Emergency Claim</a></li>
                     <li><a href="form_emg_credit.php?id=<?php echo $s_no; ?>&table=register">Emergency Credit</a></li>
-                    <li><a href="form_permission_treatment.php?id=<?php echo $s_no; ?>&table=register">Permission Treatment</a></li>
-                    <li><a href="form_permission_credit.php?id=<?php echo $s_no; ?>&table=register">Permission Credit</a></li>
                   </ul>
+                     <?php } else echo "<button class='btn btn-warning'>Pending</button>";?>
                 </div>
                          
                     <?php }
@@ -320,8 +323,6 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
                     <li><a href="form_referral.php?id=<?php echo $s_no2; ?>&table=register_hospital">Referral/Govt</a></li>
                     <li><a href="form_emg_individual.php?id=<?php echo $s_no2; ?>&table=register_hospital">Emergency Claim</a></li>
                     <li><a href="form_emg_credit.php?id=<?php echo $s_no2; ?>&table=register_hospital">Emergency Credit</a></li>
-                    <li><a href="form_permission_treatment.php?id=<?php echo $s_no2; ?>&table=register_hospital">Permission Treatment</a></li>
-                    <li><a href="form_permission_credit.php?id=<?php echo $s_no2; ?>&table=register_hospital">Permission Credit</a></li>
                   </ul>
                 </div>
                     <?php }

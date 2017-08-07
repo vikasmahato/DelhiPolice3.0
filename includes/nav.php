@@ -27,9 +27,16 @@
           	<?php
 		  	if($_SESSION['role']=="dealinghand") {
 		  	?>
-       
-          
-           <li class="treeview <?php if($currentPage =='reeval' ){echo 'active';}?>">
+                <li class="treeview <?php if ($currentPage == 'permission') {
+                    echo 'active';
+                } ?>">
+                    <a href="permission.php">
+                        <i class="fa fa-dashboard"></i> <span>Permission</span>
+                    </a>
+                </li>
+
+
+                <li class="treeview <?php if($currentPage =='reeval' ){echo 'active';}?>">
           <a href="reeval.php">
             <i class="fa fa-dashboard"></i> <span>Re-eval</span>
           </a>
@@ -76,6 +83,11 @@
             <i class="fa fa-dashboard"></i> <span>Logs</span>
           </a>
         </li>
+                <li class="treeview <?php if($currentPage =='signup' ){echo 'active';}?>">
+                    <a href="signup.php">
+                        <i class="fa fa-dashboard"></i> <span>Signup</span>
+                    </a>
+                </li>
 
          
           <?php

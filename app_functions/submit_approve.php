@@ -44,9 +44,16 @@ switch ($choice) {
 }
 if($stmt->execute()){
 
-logger($choice, 'Approval of claim', $diaryNo );
+
+        $q = $mysqli->prepare("SELECT diary_no FROM form WHERE app_id = ?");
+        $q->bind_param($id);
+    $q->execute();
+    $q->store_result();
+    $q->bind_result( $diary_no);
+
+logger($choice, 'Approval of claim', $diary_no );
         mysqli_query($con, $updateStatus);
-        header('location: $redirect');
+    header("location: $redirect");
     }else {
          header('location: some_error.php');
     }
