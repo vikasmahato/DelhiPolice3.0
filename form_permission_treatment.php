@@ -46,7 +46,7 @@
                           <option value="Deputy Commissioner of Police">Deputy Commissioner of Police</option>
                       </select>
                   </div>
-                  
+
               	<div class="form-group">
                   <label for="applicantName">Applicant Name</label>
                     <input type="text" class="form-control" id="basic-url" name="applicantName"
@@ -60,7 +60,7 @@
                   <label for="pis">PIS No</label>
                     <input type="text" class="form-control" id="basic-url" name="pis" placeholder="PIS No" required>
                 </div>
-               
+
                 <div class="form-group">
                   <label for="claimCheck">Treatment of Self or Relative:</label>
                   <div id="radioOptions">
@@ -78,17 +78,17 @@
               </div>
            </div>
                 </div>
-                
+
                    <div class="form-group" id="dependent1">
                   <label for="relation">Enter relation with the CGHS holder</label>
                  <input type="text" class="form-control" id="basic-url" name="relation" placeholder="Relation" value="self" >
                 </div>
-                  
+
                   <div class="form-group" id="dependent5">
                   <label for="relation">Enter relative name</label>
                  <input type="text" class="form-control" id="basic-url" name="relativeName" placeholder="Relative Name" value="no name" >
                 </div>
-                  
+
                    <div class="form-group">
                   <label for="startDate">Enter the Referral Date</label>
                   <div class="input-group date">
@@ -98,22 +98,22 @@
                   <input type="text" name="startDate" class="form-control pull-right" id="fromDate">
                 </div>
                 </div>
-                  
+
                       <div class="form-group">
                   <label for="hospitalName">Under Treatment at</label>
                  <input type="text" class="form-control" id="basic-url" name="hospitalName" placeholder="Hospital Name" required >
                 </div>
-                  
+
                       <div class="form-group">
                   <label for="refHospitalName">Want Treatment at</label>
                  <input type="text" class="form-control" id="basic-url" name="refHospitalName" placeholder="Referred Hospital Name" required >
                 </div>
-                  
+
                       <div class="form-group">
                   <label for="hospitalAddress">Enter the Hospital Address</label>
                <input type="text" class="form-control" id="basic-url" name="hospitalAddress" placeholder="Address" required >
                 </div>
-                  
+
                   <div class="form-group">
                   <label for="startDate">Enter Application Submission date:</label>
                   <div class="input-group date">
@@ -130,14 +130,14 @@
             <span class="input-group-addon" id="dated">/Genl. Branch/SED dated</span>
                           <input type="text" class="form-control" id="datepicker" name="diaryDate" required>
                 </div>
-                  
+
                       <div class="form-group">
                   <label for="appCGHSno">Enter the CGHS card/ID No. of Applicant</label>
                <input type="number" class="form-control" id="basic-url" name="appCGHSno" placeholder="Applicant CGHS Number" required >
                 </div>
-                  
-                     
-                  
+
+
+
                    <div class="form-group">
                   <label for="appCGHSexp">Enter the expiry date of CGHS card of Applicant</label>
                   <div class="input-group date">
@@ -147,13 +147,13 @@
                   <input type="text" name="appCGHSexp" class="form-control pull-right" id="appCGHSdate" required>
                 </div>
                 </div>
-                  
-                    
+
+
                       <div class="form-group" id="dependent2">
                   <label for="refCGHSno">Enter the CGHS No of Dependent</label>
                <input type="text" class="form-control" id="basic-url" name="refCGHSno" placeholder="CGHS No" value="0000">
                 </div>
-                  
+
                       <div class="form-group" id="dependent3">
                    <label for="refCGHSexp">Enter the expiry date of CGHS card of Dependent</label>
                   <div class="input-group date">
@@ -163,7 +163,7 @@
                   <input type="text" name="refCGHSexp" class="form-control pull-right" id="depCGHSdate" value="00-00-0000">
                 </div>
                 </div>
-                  
+
                       <div class="form-group" id="dependent4">
                  <span class="input-group-addon" id="basic-addon3">Dependent Certificate:</span>
             <div id="radioOptions">
@@ -181,7 +181,7 @@
               </div>
            </div>
                 </div>
-                  
+
                       <div class="form-group">
                   <label for="hospitalAddress">Enter the category of CGHS Applicant</label>
                <select class="custom-select form-control" name="appCGHScategory" required >
@@ -195,11 +195,11 @@
         <input type="hidden" name="pincode" value=0>
         <input type="hidden" name="amtAsked" value=0>
               </div>
-            
-	   
+
+
 	      </div>
 	      <!-- /.box-body -->
-	
+
 	      <div class="box-footer">
 	        <button type="submit" class="btn btn-primary">Submit</button>
 	      </div>

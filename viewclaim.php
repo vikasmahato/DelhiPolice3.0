@@ -1,5 +1,5 @@
 <?php include("includes/header.php"); ?>
-<?php 
+<?php
 $id = $_GET['id'];
 $sql = "SELECT diary_no, diary_date, rank, applicant_name, pis, police_station_no, application_date, a_cghs_no, a_cghs_category, status, claim_type  FROM form WHERE app_id = ?";
 
@@ -38,22 +38,22 @@ if($stmt1 = $mysqli->prepare($sql)){
         	</div>
         <!-- /.col -->
             <div class="box-body">
-	          
+
 	          <blockquote>
 	          <strong>Rank and Name: </strong>
 	           <?php echo $rank." ".$applicant_name; ?>
 	          </blockquote>
-	          
+
 	          <blockquote>
 	          <strong>PIS:
 	            </strong><?php echo $pis; ?>
 	          </blockquote>
-	          
+
 	          <blockquote>
 	          <strong>Belt No:
 	            </strong><?php echo $police_station_no; ?>
 	          </blockquote>
-	   
+
         	</div>
 		    </div>
 		  </div>
@@ -66,18 +66,18 @@ if($stmt1 = $mysqli->prepare($sql)){
 	          <strong>Application Date: </strong>
 	           <?php echo $application_date; ?>
 	          </blockquote>
-	          
-                
+
+
                  <blockquote>
 	          <strong>Applicant CGHS No: </strong>
 	           <?php echo $a_cghs_no; ?>
 	          </blockquote>
-                
+
                  <blockquote>
 	          <strong>Category: </strong>
 	           <?php echo $a_cghs_category; ?>
 	          </blockquote>
-	          
+
         	</div>
 		    </div>
 		  </div>
@@ -89,7 +89,7 @@ if($stmt1 = $mysqli->prepare($sql)){
             case 'PERMISSION': ?>
                <button type='submit' class='btn btn-info  btn-lg btn-block col-md-6' name='form12_btn'>Notesheet</button>
       <button type='submit' class='btn btn-info  btn-lg btn-block col-md-6'name='form13_btn'>Permission</button>
-          <?php 
+          <?php
             break; //permision credit
             case 'CREDIT': ?>
               <button type='submit' class='btn btn-info  btn-lg btn-block col-md-6' name='form10_btn'>Notesheet</button>
@@ -103,7 +103,7 @@ if($stmt1 = $mysqli->prepare($sql)){
                <a href="editCalcSheet.php?id=<?php echo $id; ?>" class='btn btn-danger  btn-lg btn-block col-md-6' name='edit'>Edit Calculation Sheet</a>
                <?php } ?>
           <?php
-            break; 
+            break;
             case 'OP_REFERRAL': ?>
                <button type='submit' class='btn btn-info  btn-lg btn-block col-md-6' name='form2_btn'>Notesheet</button>
      <button type='submit' class='btn btn-info  btn-lg btn-block col-md-6'name='form4_btn'>Calculation Sheet</button>
@@ -124,15 +124,15 @@ if($stmt1 = $mysqli->prepare($sql)){
             }
           ?>
           </form>
-        
-      
-        
+
+
+
           <?php
 
           $url = $_SERVER['HTTP_REFERER'];
           $referrer = substr($url, strrpos($url, '/') + 1);
          // echo $id;
-         // echo $_SERVER['HTTP_REFERER']; 
+         // echo $_SERVER['HTTP_REFERER'];
          $pages = array('dashboard_admin.php', 'dashboard_acp.php', 'dashboard_iadmin.php', 'dashboard_hag.php');
 
  if ($_SESSION['role']!="dealinghand" && (in_array($referrer, $pages))){ ?>
@@ -143,7 +143,7 @@ if($stmt1 = $mysqli->prepare($sql)){
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <button type="button" class="close" 
+                <button type="button" class="close"
                    data-dismiss="modal">
                        <span aria-hidden="true">&times;</span>
                        <span class="sr-only">Close</span>
@@ -152,24 +152,24 @@ if($stmt1 = $mysqli->prepare($sql)){
                     Confirmation Details
                 </h4>
             </div>
-            
+
             <!-- Modal Body -->
             <div class="modal-body">
-                
+
                 <form class="form-horizontal" role="form" method="post" action="app_functions/submit_approve.php">
                   <div class="form-group">
                     <label  class="col-sm-2 control-label"
                               for="orderNo">Comments:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" 
+                        <input type="text" class="form-control"
                         id="inputComment" name="inputComment" placeholder="Comment."/>
                     </div>
                   </div>
                 <input name="appId" type="text" value="<?php echo $id; ?>" class="hidden" />
                 <input type="submit" name="approve_btn" id="submit-form" value="Approve" class="btn btn-primary" />
-                </form>   
+                </form>
             </div>
-            
+
             <!-- Modal Footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default"
@@ -187,7 +187,7 @@ if($stmt1 = $mysqli->prepare($sql)){
         <div class="modal-content">
             <!-- Modal Header -->
             <div class="modal-header">
-                <button type="button" class="close" 
+                <button type="button" class="close"
                    data-dismiss="modal">
                        <span aria-hidden="true">&times;</span>
                        <span class="sr-only">Close</span>
@@ -196,7 +196,7 @@ if($stmt1 = $mysqli->prepare($sql)){
                     Are you sure to Send for Re evaluation.
                 </h4>
             </div>
-            
+
             <!-- Modal Body -->
             <div class="modal-body">
 
@@ -205,15 +205,15 @@ if($stmt1 = $mysqli->prepare($sql)){
                     <label  class="col-sm-2 control-label"
                               for="reason">Reason</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" 
+                        <input type="text" class="form-control"
                         id="inputComment" name="reason" placeholder="Reason"/>
                     </div>
                   </div>
                 <input name="appId" type="number" value="<?php echo $id; ?>" class="hidden" />
                 <input type="submit" id="submit-form" name="deny_btn" value="Re-eval" class="btn btn-warning" />
-                </form>   
+                </form>
             </div>
-            
+
             <!-- Modal Footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default"
@@ -224,22 +224,61 @@ if($stmt1 = $mysqli->prepare($sql)){
         </div>
     </div>
 </div>
-    <?php 
-      } else if(($_SESSION['role']=="dealinghand")&&(($status =="REEVAL_HAG")||($status =="REEVAL_IADMIN")||($status =="REEVAL_ACP")||($status =="REEVAL_DCP"))){ 
+    <?php
+      } else if(($_SESSION['role']=="dealinghand")&&(($status =="REEVAL_HAG")||($status =="REEVAL_IADMIN")||($status =="REEVAL_ACP")||($status =="REEVAL_DCP"))){
     ?>
     <form class="form-horizontal" role="form" method="post" action="update.php">
         <input name="appId" type="text" value="<?php echo $id; ?>" class="hidden" />
         <input name="revStatus" type="text" value="<?php echo $status; ?>" class="hidden" />
         <button type="submit" class="btn btn-success btn-lg btn-block col-md-6" name="reeval_approve">Approve</button>
-     </form> 
+     </form>
     <?php
       }
     ?>
-      
+
+    <?php
+        if($_SESSION['role']=="dealinghand"){
+
+
+          $action = "";
+
+
+        if($claim_type==="CREDIT"){
+          $action = "form_permission_credit.php";
+        }
+        if($claim_type==="PERMISSION"){
+          $action = "form_permission_treatment.php";
+        }
+        if($claim_type==="OP_REFERRAL"){
+          $action = "form_referral.php";
+        }
+        if($claim_type==="OP_EMERGENCY"){
+          $action = "form_emg_individual.php";
+        }
+        if($claim_type==="IP_EMERGENCY"){
+          $action = "form_emg_credit.php";
+        }
+
+
+        ?>
+
+
+
+        <form class="form-horizontal" role="form" method="post" action="<?php echo $action; ?>">
+        <input name="id" type="text" value="<?php echo $id; ?>" class="hidden" />
+        <button type="submit" class="btn btn-danger btn-lg btn-block col-md-6" name="edit_claim">Edit Claim</button>
+
+     </form>
+
+        <?php
+      }
+
+    ?>
+
 		</div>
 
         </div>
-      
+
     </section>
 
     <!-- /.content -->
