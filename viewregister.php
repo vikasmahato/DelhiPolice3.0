@@ -108,7 +108,7 @@ if($stmt1 = $mysqli->prepare($sql)){
                 
 	           <blockquote>
 	          <strong>Send to PHQ: </strong>
-	           <input type="number" class="form-control" id="basic-url" name="phq_number" value="<?php echo $number; ?>">
+	           <input class="form-control" id="basic-url" name="phq_number" value="<?php echo $number; ?>">
 	          </blockquote>
                 
                 
@@ -120,7 +120,7 @@ if($stmt1 = $mysqli->prepare($sql)){
 	          
                 <blockquote>
 	          <strong>Sanction No: </strong>
-                <input type="number" class="form-control" id="basic-url" name="sanction_no" value="<?php echo $sanction_no; ?>">
+                <input class="form-control" id="basic-url" name="sanction_no" value="<?php echo $sanction_no; ?>">
 	           </blockquote>    
                   <blockquote>
                  <label for="date">Sanction Date</label>

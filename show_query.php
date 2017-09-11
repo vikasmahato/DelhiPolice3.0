@@ -77,6 +77,8 @@ if($stmt1 = $mysqli->prepare($query)){
                
                 while($stmt1->fetch())
                 {
+		$table = "register";
+		if($diaryType=='Hospital') $table='register_hospital';
                 ?>
                 <tr><td><?php echo $num; ?></td>
                        <td>
@@ -106,11 +108,9 @@ if($stmt1 = $mysqli->prepare($query)){
                   <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Make Claim
                     <span class="fa fa-caret-down"></span></button>
                   <ul class="dropdown-menu">
-                    <li><a href="form_referral.php?id=<?php echo $s_no; ?>&table=register">Referral/Govt</a></li>
-                    <li><a href="form_emg_individual.php?id=<?php echo $s_no; ?>&table=register">Emergency Claim</a></li>
-                    <li><a href="form_emg_credit.php?id=<?php echo $s_no; ?>&table=register">Emergency Credit</a></li>
-                    <li><a href="form_permission_treatment.php?id=<?php echo $s_no; ?>&table=register">Permission Treatment</a></li>
-                    <li><a href="form_permission_credit.php?id=<?php echo $s_no; ?>&table=register">Permission Credit</a></li>
+                    <li><a href="form_referral.php?id=<?php echo $s_no; ?>&table=<?php echo $table; ?>">Referral/Govt</a></li>
+                    <li><a href="form_emg_individual.php?id=<?php echo $s_no; ?>&table=<?php echo $table; ?>">Emergency Claim</a></li>
+                    <li><a href="form_emg_credit.php?id=<?php echo $s_no; ?>&table=<?php echo $table; ?>">Emergency Credit</a></li>
                   </ul>
                 </div>
                          

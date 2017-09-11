@@ -1,3 +1,3 @@
 <?php
 
-if (!defined('DEBUG')) define("DEBUG", false);
+if (!defined('DEBUG')) define("DEBUG", true);

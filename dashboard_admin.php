@@ -29,7 +29,7 @@
             </div>
             <!-- /.box-header -->
               <div class="box-body">
-              <table id="godown" class="table table-bordered table-hover">
+              <table id="dcpallclaims" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                   <th>Status</th>

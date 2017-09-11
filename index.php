@@ -57,7 +57,7 @@
                     </div>
                 </div>
 
-                <a href="forgot_password.php">Forgot Password</a>
+                <a href="forgot_password.php" style="display:none">Forgot Password</a>
             </form>
 
 
@@ -66,7 +66,7 @@
     </div>
     <!-- /.login-box -->
 
-    <div class="login-box" style="display: none;">
+    <div class="login-box" style="display:none;">
         <!-- /.register-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">Sign Up</p>
