@@ -1,6 +1,7 @@
 <?php 
 $string1 = "";
 $string2 = $value['a_cghs_no'];
+$date = date("Y");
 if($value['r_cghs_no']!=0){
     $string1 = $value['relation']." of";
     $string2 = $value['r_cghs_no'];
@@ -33,7 +34,7 @@ $form13 = "<html lang='en'>
       <div class='container' style='font: 20px, arial, Times New Roman;'>
         <h5 style='text-align:center;'><u>OFFICE OF THE DEPUTY COMMISIONER OF POLICE SOUTH EAST DISTRICT,</u></h5>
         <h5 style='text-align:center;'><u> IST FLOOR, POLICE STATION SARITA VIHAR, NEW DELHI-110076.</u></h5>
-        <div style='margin-top:10px;'>No.__________/ Genl. Br. (SED) dated New Delhi, the___________/2017 </div>
+        <div style='margin-top:10px;'>No.__________/ Genl. Br. (SED) dated New Delhi, the___________/$date </div>
         <div>To,</div>
         <div><div style='margin-left:100px;'>The Medical Superintendent,</div>
         <div style='margin-left:100px;'>$value[ref_hospital_name]</div>
@@ -48,7 +49,7 @@ $form13 = "<html lang='en'>
       <div style='text-align:right;margin-bottom:40px;margin-top:30px;'>Yours faithfully,</div>
       <div style='text-align:right;margin-top:60px;'>ASSTT. COMMINISSONER OF POLICE (HQ),</div>
       <div style='text-align:right'>SOUTH EAST DISTRICT, NEW DELHI.</div>
-      <div style='margin-top:20px;'>No.___________ Genl. Br. (SED) dated, New Delhi, the____________/2017 </div>    
+      <div style='margin-top:20px;'>No.___________ Genl. Br. (SED) dated, New Delhi, the____________/$date </div>    
        <div style='margin-left:60px;margin-bottom:20px;margin-top:20px;'>Copy forwarded to the :-</div>
        <div>1. &nbsp; &nbsp; &nbsp; I/C CMO, CGHS Dispensary No. ___________________ for information.</div> 
        <div style='margin-top:10px;'>2. &nbsp; &nbsp; &nbsp; ACP/SHO/Inspector/RI/SO/PA ___________________ to deliver the same to the applicant and he/she may be directed to take the medicines from his concerned CGHS dispensary/wellness center as prescribed by the Hospital authority.</div>   

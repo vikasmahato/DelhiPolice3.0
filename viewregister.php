@@ -154,11 +154,26 @@ if($stmt1 = $mysqli->prepare($sql)){
                 <input type="hidden" value="1" name="objection">
                  <input type="hidden"  value="<?php echo $s_no; ?>" name="id" />
                <input type="hidden"  value="<?php echo $diaryType; ?>" name="diaryType" />
+              
+              <?php if(isset($_GET['month'])){?>
+                <input type="hidden"  value="<?php echo $_GET['month']; ?>" name="month" />
+                <input type="hidden"  value="<?php echo $_GET['table']; ?>" name="table" />
+              
+              <?php } ?>
+              
+              
                 <button type="submit" class="btn btn-danger btn-lg btn-block col-md-6" >Objection</button>
               <?php } else { ?> 
                <input type="hidden" value="0" name="objection">
                  <input type="hidden"  value="<?php echo $s_no; ?>" name="id" />
               <input type="hidden"  value="<?php echo $diaryType; ?>" name="diaryType" />
+              
+                <?php if(isset($_GET['month'])){?>
+                <input type="hidden"  value="<?php echo $_GET['month']; ?>" name="month" />
+                <input type="hidden"  value="<?php echo $_GET['table']; ?>" name="table" />
+              
+              <?php } ?>
+              
                 <button type="submit" class="btn btn-danger btn-lg btn-block col-md-6" >Remove Objection</button>
               <?php } ?>
                 </form>

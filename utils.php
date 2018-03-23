@@ -54,12 +54,12 @@ function get_data_for_calcSheet($id){
     foreach ($con->query($sql) as $row) {
     $si++;
     $string.="<tr>
-    <td>$si</td>
-    <td>$row[bill_no_hosp]</td>
-    <td>$row[date]</td>
-    <td>$row[treatment]</td>
-    <td>$row[amt_asked]</td>
-    <td>$row[total]</td>
+    <td style='border: 1px solid black; font-size: 80%;'>$si</td>
+    <td style='border: 1px solid black; font-size: 80%;'>$row[bill_no_hosp]</td>
+    <td style='border: 1px solid black; font-size: 80%;'>$row[date]</td>
+    <td style='border: 1px solid black; font-size: 80%;'>$row[treatment]</td>
+    <td style='border: 1px solid black; font-size: 80%;'>$row[amt_asked]</td>
+    <td style='border: 1px solid black; font-size: 80%;'>$row[total]</td>
     </tr>";
     }
     

@@ -11,7 +11,7 @@ if(isset($_POST)){
 	$objection = $_POST['objection'];
 
 	$diaryType = $_POST['diaryType'];
-
+    
 
 	if($diaryType=='Individual'){  
 
@@ -31,7 +31,10 @@ if(isset($_POST)){
 
 
 	if($stmt->execute()){
-	    header('location: ../dashboard.php');
+         if(isset($_POST['month']))
+            header("location: ../show_query.php?month=$_POST[month]&diaryType=$_POST[table]&submit=");
+        else
+	       header('location: ../dashboard.php');
 	    
 	}else{
 		if(DEBUG) echo $stmt->error;

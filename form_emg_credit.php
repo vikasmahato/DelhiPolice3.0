@@ -7,7 +7,7 @@ if(isset($_POST['edit_claim'])){
 
 
           $sql1 = '';
-           $sql1 = "SELECT applicant_name, pis, rank, relation, relative_name, pincode, startdate, enddate, hospital_name, hospital_address, police_station_no, si_no, diary_no, ref_hospital_name, a_cghs_no, a_cghs_exp, r_cghs_no, r_cghs_exp, a_cghs_category, disease, application_date, diary_date, status, period, claim_type, hospType FROM form WHERE app_id = ?";
+           $sql1 = "SELECT applicant_name, pis, rank, relation, relative_name, pincode, startdate, enddate, hospital_name, hospital_address, police_station_no, si_no, diary_no, ref_hospital_name, a_cghs_no, a_cghs_exp, r_cghs_no, r_cghs_exp, a_cghs_category, disease, application_date, diary_date, status, period, claim_type, hospType, startdate, enddate FROM form WHERE app_id = ?";
 
 
 
@@ -15,7 +15,7 @@ if(isset($_POST['edit_claim'])){
             $stmt1->bind_param('s', $id );
             $stmt1->execute();
             $stmt1->store_result();
-            $stmt1->bind_result( $applicantName, $pis, $rank, $relation, $relative_name, $pincode, $startdate, $enddate, $hospitalName, $hospital_address, $idNo, $si_no, $diaryNo, $ref_hospital_name, $a_cghs_no, $a_cghs_exp, $r_cghs_no, $r_cghs_exp, $a_cghs_category, $disease, $application_date, $diaryDate, $status, $period, $claim_type, $hospType );
+            $stmt1->bind_result( $applicantName, $pis, $rank, $relation, $relative_name, $pincode, $startdate, $enddate, $hospitalName, $hospital_address, $idNo, $si_no, $diaryNo, $ref_hospital_name, $a_cghs_no, $a_cghs_exp, $r_cghs_no, $r_cghs_exp, $a_cghs_category, $disease, $application_date, $diaryDate, $status, $period, $claim_type, $hospType, $startdate, $enddate );
            $stmt1->fetch();
             }else if(DEBUG) echo $mysqli->error();
 
@@ -126,14 +126,14 @@ if(isset($_GET)){
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="startDate" class="form-control pull-right" id="fromDate">
+                  <input type="text" name="startDate" class="form-control pull-right" id="fromDate" <?php if(isset($startdate)) echo "value='$startdate'"; ?> >
                 </div>
                        <span class="input-group-addon" id="periodTo">To</span>
                      <div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" name="endDate" class="form-control pull-right" id="toDate">
+                  <input type="text" name="endDate" class="form-control pull-right" id="toDate" <?php if(isset($enddate)) echo "value='$enddate'"; ?> >
                 </div>
                 </div>
 

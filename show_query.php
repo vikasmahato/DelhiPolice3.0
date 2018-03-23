@@ -1,19 +1,19 @@
 <?php include ("includes/header.php");?>
 <?php 
-$month = $_POST['month'];
-$diaryType = $_POST['diaryType'];
+$month = $_GET['month'];
+$diaryType = $_GET['diaryType'];
 
 if($diaryType==='Individual'){
     $query = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type 
         FROM register
-        WHERE Year(timestamp) = Year(CURRENT_TIMESTAMP) 
-        AND Month(timestamp) = ?
+        WHERE 
+        Month(timestamp) = ?
         AND diaryType = 'Individual' ORDER BY timestamp DESC";
 } elseif($diaryType==='Hospital'){
     $query = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type 
         FROM register_hospital
-        WHERE Year(timestamp) = Year(CURRENT_TIMESTAMP) 
-        AND Month(timestamp) = ?
+        WHERE
+         Month(timestamp) = ?
         AND diaryType = 'Hospital' ORDER BY timestamp DESC";
 }
 
@@ -89,7 +89,7 @@ if($stmt1 = $mysqli->prepare($query)){
                   <td><?php echo $rank." ".$applicantName." No.".$idNo; ?></td>
                      <td><?php echo $treatment_by; ?></td>
                     <td><?php echo $type ?></td>
-                <td><a class="btn btn-block btn-default" href="viewregister.php?id=<?php echo $s_no; ?>&type=<?php echo $diaryType; ?>"><i class="fa fa-eye"></i> View</a></td>
+                <td><a class="btn btn-block btn-default" href="viewregister.php?id=<?php echo $s_no; ?>&type=<?php echo $diaryType; ?>&month=<?php echo $month; ?>&table=<?php echo $diaryType; ?>"><i class="fa fa-eye"></i> View</a></td>
                     <td>
                     <?php 
                   

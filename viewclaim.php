@@ -266,7 +266,7 @@ if($stmt1 = $mysqli->prepare($sql)){
 
         <form class="form-horizontal" role="form" method="post" action="<?php echo $action; ?>">
         <input name="id" type="text" value="<?php echo $id; ?>" class="hidden" />
-        <button type="submit" class="btn btn-danger btn-lg btn-block col-md-6" name="edit_claim">Edit Claim</button>
+        <button type="submit" onClick="return confirm();" name="edit_claim">Edit Claim</button>
 
      </form>
 

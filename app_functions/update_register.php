@@ -52,7 +52,10 @@ if($stmt1 = $mysqli->prepare($sql)){
 
 
 if($stmt1->execute()){
-header('location: ../dashboard.php');
+ if(isset($_POST['month']))
+            header("location: ../show_query.php?month=$_POST[month]&diaryType=$_POST[table]&submit=");
+        else
+	       header('location: ../dashboard.php');
 }else {
     if(DEBUG) echo $stmt1->error;
     else header('location: ../some_error.php');

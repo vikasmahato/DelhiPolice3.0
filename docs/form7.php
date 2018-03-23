@@ -1,6 +1,7 @@
 <?php
 $patient_name ="";
 $rel_string="";
+$date = date("Y");
 if($value['r_cghs_no']!=0)
 {
     $patient_name="$value[relative_name]";
@@ -37,7 +38,7 @@ text-align:center;
       <div class='container' style='margin-top:15px; font-size:1.3em;'>
           <h3 style='text-align:center;'><b><u>OFFICE OF THE DEPUTY COMMISIONER OF POLICE SOUTH EAST DISTRICT,</u></b></h3>
           <h3><u><b>IST FLOOR, POLICE STATION SARITA VIHAR, NEW DELHI-110076.</u></b></h3>
-          <div style='text-align:justify'>No.____________/ Genl. Br. (SED) dated New Delhi, the ____________/2017. </div>
+          <div style='text-align:justify'>No.____________/ Genl. Br. (SED) dated New Delhi, the ____________/$date. </div>
         <div>To</div>
         <div style='margin-top:15px;margin-left:92px;'>The Deputy Commissioner of Police</div>
         <div style='margin-bottom:10px;margin-left:92px;'>General Administration/PHQ, Delhi</div>

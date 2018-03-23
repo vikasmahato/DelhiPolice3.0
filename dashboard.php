@@ -647,7 +647,7 @@ if($stmt6 = $mysqli->prepare($pending_hos)){
         <h4 class="modal-title" id="myModalLabel">Please Select</h4>
       </div>
       <div class="modal-body">
-        <form action="show_query.php" method="post">
+        <form action="show_query.php" method="get">
            <select class="custom-select form-control" name="month" required >
                <option value="" selected disabled>Please select</option>
                <option value="01">January</option>
