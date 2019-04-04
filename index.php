@@ -19,14 +19,19 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
 
-
+<style>
+body {
+    background-color: red;
+}
+</style>
 </head>
 
 
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" style="background-color:red;">
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>Delhi Police 3.0</b></a>
+            <a href="#">Delhi Police 3.0</a>
+		<b>Payment overdue</b>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">

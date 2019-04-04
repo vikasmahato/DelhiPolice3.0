@@ -1,7 +1,7 @@
 <?php include ("includes/header.php");?>
 <?php 
- $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register WHERE diaryType='Individual' AND  Month(timestamp) = Month(CURRENT_TIMESTAMP)  ORDER BY timestamp DESC";
-$sql2 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register_hospital WHERE diaryType='Hospital' AND  Month(timestamp) = Month(CURRENT_TIMESTAMP) ORDER BY timestamp DESC";
+ $sql1 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register WHERE diaryType='Individual' AND  Month(timestamp) = Month(CURRENT_TIMESTAMP) AND Year(timestamp)=Year(CURRENT_TIMESTAMP)  ORDER BY timestamp DESC";
+$sql2 = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register_hospital WHERE diaryType='Hospital' AND  Month(timestamp) = Month(CURRENT_TIMESTAMP) AND Year(timestamp)=Year(CURRENT_TIMESTAMP) ORDER BY timestamp DESC";
 $ind_objection = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register WHERE objection='1' AND diaryType='Individual' ORDER BY timestamp DESC";
 $hos_objection = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register_hospital WHERE objection='1' AND diaryType='Hospital' ORDER BY timestamp DESC";
 $pending_ind = "SELECT s_no, diaryNo, diaryType, diaryDate, rank, applicantName, idNo, treatment_by, type FROM register WHERE sanction_no=''  ORDER BY timestamp DESC";

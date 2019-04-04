@@ -27,6 +27,12 @@ $form10 = "<html lang='en'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     <title>Medical Claim</title>
+<style>
+body {
+	font-size: 14px;
+}
+</style>
+
   </head>
   <body style='margin-left:2cm'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>

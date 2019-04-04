@@ -34,6 +34,12 @@ table {
     border-collapse: collapse;
 }
       </style>
+<style>
+body {
+        font-size: 14px;
+}
+</style>
+
   </head>
   <body>
       <div class='container'>
@@ -72,7 +78,7 @@ table {
   </table>
   <br>
     <p style='text-indent:12%;text-align:justify;'>
-        It is therefore, requested that necessary ex-past facto sanction may kindly be obtained from the component authority and conveyed to this office at an early date. Funds are available under head “01.01.06 Medical Treatment” during the current financial year 2017-18.
+        It is therefore, requested that necessary ex-past facto sanction may kindly be obtained from the component authority and conveyed to this office at an early date. Funds are available under head “01.01.06 Medical Treatment” during the current financial year 2019-20.
     </p>
    
     <div class='row'>
